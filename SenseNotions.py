@@ -123,6 +123,8 @@ if st.button("Enviar Informações", key="send_button", use_container_width=True
 # ⬇️ **Opção de Download**
 if not df_blue.empty:
     st.download_button("Baixar Tabelas", df_blue.to_csv().encode("utf-8"), "tabelas.csv", "text/csv", key="download_csv", use_container_width=True)
+
+#teste
     
 
 
