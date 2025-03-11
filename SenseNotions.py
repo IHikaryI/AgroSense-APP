@@ -98,7 +98,7 @@ def save_to_mongo(df_blue, edited_df, image_data):
             for img_id, img in image_data:
                 # ✨ Comprimir imagem antes de salvar
                 img_byte_arr = io.BytesIO()
-                img.save(img_byte_arr, format='JPEG', quality=50)  # Reduz qualidade para 50%
+                img.save(img_byte_arr, format='JPEG', quality=65)  # Reduz qualidade para 50%
                 img_bytes = img_byte_arr.getvalue()
                 
                 doc = {
@@ -123,5 +123,6 @@ if st.button("Enviar Informações", key="send_button", use_container_width=True
 # ⬇️ **Opção de Download**
 if not df_blue.empty:
     st.download_button("Baixar Tabelas", df_blue.to_csv().encode("utf-8"), "tabelas.csv", "text/csv", key="download_csv", use_container_width=True)
+    
 
 

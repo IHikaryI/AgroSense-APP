@@ -1,2 +1,0 @@
-# AgroSense-APP
-AgroSense Site
